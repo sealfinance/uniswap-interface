@@ -19,7 +19,13 @@ export const COMP = new Token(ChainId.MAINNET, '0xc00e94Cb662C3520282E6f57172140
 export const MKR = new Token(ChainId.MAINNET, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
 export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
 export const WBTC = new Token(ChainId.MAINNET, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 18, 'WBTC', 'Wrapped BTC')
+
 export const SEAL = new Token(ChainId.MAINNET, '0x33c2DA7Fd5B125E629B3950f3c38d7f721D7B30D', 18, 'Seal', 'Seal Finance')
+export const HAKKA = new Token(ChainId.MAINNET, '0x0E29e5AbbB5FD88e28b2d355774e73BD47dE3bcd', 18, 'HAKKA', 'Hakka Finance')
+export const MTA = new Token(ChainId.MAINNET, '0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2', 18, 'MTA', 'Meta')
+export const PICKLE = new Token(ChainId.MAINNET, '0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5', 18, 'PICKLE', 'PickleToken')
+export const SNX = new Token(ChainId.MAINNET, '0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F', 18, 'SNX', 'Synthetix Network Token')
+export const _UNI = new Token(ChainId.MAINNET, '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984', 18, 'UNI', 'Uniswap')
 
 // TODO this is only approximate, it's actually based on blocks
 export const PROPOSAL_LENGTH_IN_DAYS = 7
@@ -59,7 +65,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], SEAL]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], SEAL, HAKKA, PICKLE, MTA, SNX, _UNI, WBTC, USDT]
 }
 
 /**
